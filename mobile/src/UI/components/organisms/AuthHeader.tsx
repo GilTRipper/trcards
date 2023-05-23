@@ -1,9 +1,12 @@
 import { StyleSheet, TouchableOpacity } from "react-native";
-import { Icon, Row, Text } from "../atoms";
-import { center } from "@shopify/react-native-skia";
 import { useRouter } from "expo-router";
 
-export const AuthHeader = () => {
+import { Icon, Row, Text } from "~/UI/components/atoms";
+
+type AuthHeaderProps = {
+  withMarginHorizontal?: boolean;
+};
+export const AuthHeader = ({ withMarginHorizontal }: AuthHeaderProps) => {
   const router = useRouter();
 
   const handleBackPress = () => {
@@ -11,7 +14,11 @@ export const AuthHeader = () => {
   };
 
   return (
-    <Row justify="space-between" align="center">
+    <Row
+      justify="space-between"
+      align="center"
+      style={withMarginHorizontal ? styles.horizontalMargin : null}
+    >
       <TouchableOpacity
         activeOpacity={0.5}
         onPress={handleBackPress}
@@ -24,4 +31,8 @@ export const AuthHeader = () => {
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  horizontalMargin: {
+    marginHorizontal: 12,
+  },
+});

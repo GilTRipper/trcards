@@ -1,6 +1,6 @@
 import { Image, TouchableOpacity, View } from "react-native";
 
-import { Icons } from "../../constants";
+import { Icons } from "~/UI/constants";
 
 import type {
   ImageResizeMode,
@@ -8,7 +8,7 @@ import type {
   StyleProp,
   ViewStyle,
 } from "react-native";
-import type { IconsType } from "../../constants";
+import type { IconsType } from "~/UI/constants";
 
 type IconProps = {
   onPress?: (() => void) | undefined;

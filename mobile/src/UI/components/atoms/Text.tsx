@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text as BaseText } from "react-native";
 import type { TextProps as BaseTextProps } from "react-native";
-import { Colors } from "../../constants";
+import { Colors } from "~/UI/constants";
 
 type TextProps = {
   regular?: boolean;

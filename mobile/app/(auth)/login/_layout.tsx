@@ -1,6 +1,6 @@
 import { Slot, Stack } from "expo-router";
 
-const LoginLayout = () => {
+export default () => {
   return (
     <>
       <Stack.Screen options={{ headerShown: false }}></Stack.Screen>
@@ -9,4 +9,3 @@ const LoginLayout = () => {
   );
 };
 
-export default LoginLayout;

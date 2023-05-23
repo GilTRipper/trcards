@@ -10,7 +10,7 @@ import {
 } from "@shopify/react-native-skia";
 import { StatusBar } from "expo-status-bar";
 
-import { Colors, Layout } from "../../constants";
+import { Colors, Layout } from "~/UI/constants";
 
 import type { StyleProp, ViewStyle } from "react-native";
 import type { StatusBarStyle } from "expo-status-bar";
