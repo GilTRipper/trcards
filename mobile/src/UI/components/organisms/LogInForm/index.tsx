@@ -51,6 +51,7 @@ const styles = StyleSheet.create({
   formTitle: {
     fontSize: 24,
     lineHeight: 28,
+    marginLeft: 10,
   },
   centerText: {
     textAlign: "center",
