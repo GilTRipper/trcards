@@ -3,4 +3,5 @@ export { Icon } from "./Icon";
 export { Row } from "./Row";
 export { Text } from "./Text";
 export { TextInput, PasswordInput } from "./TextInput";
-export { BaseButton } from "./Button";
+export { Button } from "./Button";
+export { AppLayout } from "./AppLayout";

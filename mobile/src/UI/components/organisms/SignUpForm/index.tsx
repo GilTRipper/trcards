@@ -2,15 +2,11 @@ import { StyleSheet, View } from "react-native";
 import { Button, PasswordInput, Text, TextInput } from "../../atoms";
 import { useRouter } from "expo-router";
 
-export const LoginForm = () => {
+export const SignUpForm = () => {
   const router = useRouter();
 
-  const goSignUp = () => {
-    router.push("(auth)/sign-up");
-  };
-
-  const goResetPassword = () => {
-    router.push("(auth)/reset-password");
+  const goLogin = () => {
+    router.push("/(auth)/login");
   };
 
   return (
@@ -19,23 +15,24 @@ export const LoginForm = () => {
         Log In with Email
       </Text>
       <TextInput
+        placeholder="Username"
+        keyboardType="default"
+        autoComplete="username"
+        textContentType="username"
+      />
+      <TextInput
         placeholder="Email"
         keyboardType="email-address"
         autoComplete="email"
         textContentType="emailAddress"
       />
       <PasswordInput placeholder="Password" />
-      <Button>Log in</Button>
-      <Text style={[styles.centerText, styles.mt6]}>
-        Forgot your password?{"  "}
-        <Text semiBold onPress={goResetPassword}>
-          Reset here
-        </Text>
-      </Text>
+      <PasswordInput placeholder="Confirm password" />
+      <Button>Sign up</Button>
       <Text style={[styles.bottomText, styles.centerText]}>
-        Don’t have an account?{"  "}
-        <Text semiBold onPress={goSignUp}>
-          Sign Up
+        Already have an account?{"  "}
+        <Text semiBold onPress={goLogin}>
+          Log in
         </Text>
       </Text>
     </View>
@@ -58,8 +55,5 @@ const styles = StyleSheet.create({
   },
   bottomText: {
     marginTop: "auto",
-  },
-  mt6: {
-    marginTop: 6,
   },
 });

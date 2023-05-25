@@ -78,5 +78,6 @@ const styles = StyleSheet.create({
   },
   screenContainer: {
     flex: 1,
+    zIndex: 0,
   },
 });

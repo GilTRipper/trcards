@@ -13,7 +13,7 @@ type BaseButtonProps = { children?: string } & PressableProps;
 
 const AnimatedButton = Animated.createAnimatedComponent(Pressable);
 
-export const BaseButton = ({
+export const Button = ({
   children,
   onPressIn,
   onPressOut,

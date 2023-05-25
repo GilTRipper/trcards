@@ -1,8 +1,9 @@
 import { View } from "react-native";
 import { Stack } from "expo-router";
 import { useFonts } from "expo-font";
+import { AppLayout } from "~/UI/components/atoms";
 
-const AppLayout = () => {
+const RootLayout = () => {
   const [fontsLoaded] = useFonts({
     "Mona-Sans-Regular": require("assets/fonts/MonaSans/Mona-Sans-Regular.ttf"),
     "Mona-Sans-Medium": require("assets/fonts/MonaSans/Mona-Sans-Medium.ttf"),
@@ -18,10 +19,10 @@ const AppLayout = () => {
   }
 
   return (
-    <View style={{ flex: 1 }} onLayout={onRootLayoutView}>
+    <AppLayout onLayout={onRootLayoutView}>
       <Stack />
-    </View>
+    </AppLayout>
   );
 };
 
-export default AppLayout;
+export default RootLayout;

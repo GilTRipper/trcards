@@ -1,3 +1,3 @@
-import { SignUpScreen } from "~/UI/components/screens";
+import { SignUpScreen } from "~/UI/screens";
 
 export default () => <SignUpScreen />;

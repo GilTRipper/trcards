@@ -23,6 +23,24 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       }
-    }
+    },
+    "plugins": [
+      [
+        "expo-build-properties", 
+        {
+          "android": {
+            "compileSdkVersion": 31,
+            "targetSdkVersion": 31,
+            "buildToolsVersion": "31.0.0",
+            "newArchEnabled": true
+          },
+          "ios": {
+            "deploymentTarget": "13.0",
+            "newArchEnabled": true
+          }
+
+        }
+      ]
+    ]
   }
 }

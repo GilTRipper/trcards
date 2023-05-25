@@ -1,8 +1,10 @@
 import { Slot, Stack } from "expo-router";
+import { AppLayout } from "~/UI/components/atoms";
 
 export default () => (
-  <>
-    <Slot />
+  <AppLayout>
     <Stack.Screen options={{ headerShown: false }} />
-  </>
+    <Slot />
+  </AppLayout>
 );
+
