@@ -1,18 +1,12 @@
 import { StyleSheet, View } from "react-native";
 import { Button, PasswordInput, Text, TextInput } from "../../atoms";
-import { useRouter } from "expo-router";
+import { Link } from "expo-router";
 
 export const SignUpForm = () => {
-  const router = useRouter();
-
-  const goLogin = () => {
-    router.push("/(auth)/login");
-  };
-
   return (
     <View style={styles.formWrapper}>
       <Text medium style={styles.formTitle}>
-        Log In with Email
+        Sign Up with Email
       </Text>
       <TextInput
         placeholder="Username"
@@ -31,8 +25,8 @@ export const SignUpForm = () => {
       <Button>Sign up</Button>
       <Text style={[styles.bottomText, styles.centerText]}>
         Already have an account?{"  "}
-        <Text semiBold onPress={goLogin}>
-          Log in
+        <Text semiBold>
+          <Link href="/auth/login">Log in</Link>
         </Text>
       </Text>
     </View>

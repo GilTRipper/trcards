@@ -1,18 +1,8 @@
 import { StyleSheet, View } from "react-native";
 import { Button, PasswordInput, Text, TextInput } from "../../atoms";
-import { useRouter } from "expo-router";
+import { Link } from "expo-router";
 
 export const LoginForm = () => {
-  const router = useRouter();
-
-  const goSignUp = () => {
-    router.push("(auth)/sign-up");
-  };
-
-  const goResetPassword = () => {
-    router.push("(auth)/reset-password");
-  };
-
   return (
     <View style={styles.formWrapper}>
       <Text medium style={styles.formTitle}>
@@ -28,14 +18,14 @@ export const LoginForm = () => {
       <Button>Log in</Button>
       <Text style={[styles.centerText, styles.mt6]}>
         Forgot your password?{"  "}
-        <Text semiBold onPress={goResetPassword}>
-          Reset here
+        <Text semiBold>
+          <Link href="/auth/reset-password">Reset here</Link>
         </Text>
       </Text>
       <Text style={[styles.bottomText, styles.centerText]}>
         Don’t have an account?{"  "}
-        <Text semiBold onPress={goSignUp}>
-          Sign Up
+        <Text semiBold>
+          <Link href="/auth/sign-up">Sign Up</Link>
         </Text>
       </Text>
     </View>

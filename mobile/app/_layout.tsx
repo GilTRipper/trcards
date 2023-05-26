@@ -20,7 +20,9 @@ const RootLayout = () => {
 
   return (
     <AppLayout onLayout={onRootLayoutView}>
-      <Stack />
+      <Stack>
+        <Stack.Screen name="auth" options={{ headerShown: false }} />
+      </Stack>
     </AppLayout>
   );
 };
